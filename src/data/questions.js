@@ -1,4 +1,4 @@
-﻿export const questions = [
+export const questions = [
   {
     id: 1,
     question: "What is the main purpose of a Message Authentication Code (MAC)?",

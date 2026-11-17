@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import { ShieldCheckIcon, KeyIcon } from "./Icons";
 
 export default function Navbar({ currentQuestion, totalQuestions, isCompleted }) {

@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import { CheckCircleIcon, XCircleIcon, ArrowRightIcon, BookOpenIcon, KeyIcon } from "./Icons";
 
 export default function AnswerFeedback({

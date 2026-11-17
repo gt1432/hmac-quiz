@@ -1,4 +1,4 @@
-﻿import React, { useState } from "react";
+import React, { useState } from "react";
 import { CheckCircleIcon, XCircleIcon, KeyIcon, BookOpenIcon } from "./Icons";
 
 export default function ReviewSection({ questions, userAnswers = [] }) {

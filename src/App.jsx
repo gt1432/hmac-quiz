@@ -1,4 +1,4 @@
-﻿import React, { useState } from "react";
+import React, { useState } from "react";
 import { questions } from "./data/questions";
 import Navbar from "./components/Navbar";
 import ProgressBar from "./components/ProgressBar";

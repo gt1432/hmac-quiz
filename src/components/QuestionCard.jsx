@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import AnswerFeedback from "./AnswerFeedback";
 import { CheckCircleIcon, XCircleIcon, ShieldIcon } from "./Icons";
 

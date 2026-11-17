@@ -1,4 +1,4 @@
-﻿# HMAC Security Assessment Quiz Website
+# HMAC Security Assessment Quiz Website
 
 A professional, modern, responsive interactive web application built with **React**, **Vite**, **HTML5**, **CSS3**, and **JavaScript** to test and reinforce knowledge of **Hash-based Message Authentication Codes (HMAC)** based on **RFC 2104**.
 
