@@ -1,6 +1,6 @@
 import React from "react";
 import AnswerFeedback from "./AnswerFeedback";
-import { CheckCircleIcon, XCircleIcon, ShieldIcon } from "./Icons";
+import { CheckCircleIcon, XCircleIcon } from "./Icons";
 
 export default function QuestionCard({
   question,
@@ -20,10 +20,9 @@ export default function QuestionCard({
     <div className="card question-card">
       {/* Question Header */}
       <div className="question-header">
-        <div className="question-meta-pill">
-          <ShieldIcon className="w-4 h-4 text-teal-400" />
-          <span>QUESTION {questionNumber.toString().padStart(2, "0")} OF {totalQuestions.toString().padStart(2, "0")}</span>
-        </div>
+        <span className="question-meta-pill">
+          QUESTION {questionNumber} OF {totalQuestions}
+        </span>
       </div>
 
       {/* Question Title */}
@@ -70,10 +69,10 @@ export default function QuestionCard({
               <div className="option-text">{optionText}</div>
               <div className="option-status-icon" aria-hidden="true">
                 {isSubmitted && isThisCorrect && (
-                  <CheckCircleIcon className="w-6 h-6 text-emerald-400 status-icon-correct" />
+                  <CheckCircleIcon className="w-6 h-6 status-icon-correct" />
                 )}
                 {isThisSelectedAndWrong && (
-                  <XCircleIcon className="w-6 h-6 text-rose-400 status-icon-wrong" />
+                  <XCircleIcon className="w-6 h-6 status-icon-wrong" />
                 )}
               </div>
             </button>
@@ -91,10 +90,9 @@ export default function QuestionCard({
             disabled={!selectedOption}
           >
             <span>Submit Answer</span>
-            <span className="btn-glow"></span>
           </button>
           {!selectedOption && (
-            <p className="select-prompt">Please select an option (A, B, C, or D) to continue.</p>
+            <p className="select-prompt">Please select an option to continue.</p>
           )}
         </div>
       )}
@@ -103,11 +101,6 @@ export default function QuestionCard({
       {isSubmitted && (
         <AnswerFeedback
           isCorrect={isCorrect}
-          selectedOptionKey={selectedOption}
-          selectedOptionText={question.options[selectedOption]}
-          correctOptionKey={question.correctAnswer}
-          correctOptionText={question.options[question.correctAnswer]}
-          explanation={question.explanation}
           isLastQuestion={isLastQuestion}
           onNextQuestion={onNextQuestion}
         />
